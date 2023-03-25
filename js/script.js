@@ -238,10 +238,7 @@ let website = {
   com: []}
 let other = []
 
-users = users.forEach(item => {
-    item.splice(users.lastIndexOf('website'), 1)
-    console.log(users);
-})
+
 website.net = users.filter(item => item.website.includes(".net") == true)
 website.org = users.filter(item => item.website.includes(".org") == true)
 website.info = users.filter(item => item.website.includes(".info") == true)
