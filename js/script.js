@@ -238,15 +238,18 @@ let website = {
   com: []}
 let other = []
 
+// let other = []
+// users= users.forEach(item => {
+//     console.log(item.website);
+// })
 
-website.net = users.filter(item => item.website.includes(".net") == true)
-website.org = users.filter(item => item.website.includes(".org") == true)
-website.info = users.filter(item => item.website.includes(".info") == true)
-website.com = users.filter(item => item.website.includes(".com") == true)
-website = website.forEach(item => { 
+website.net = users.filter(item => item.includes(".net") == true)
+website.org = users.filter(item => item.includes(".org") == true)
+website.info = users.filter(item => item.includes(".info") == true)
+website.com = users.filter(item => item.includes(".com") == true)
 
-    });
-other = users.filter(item => item.website.includes(".net") == false && item.website.includes(".org") == false && item.website.includes(".info") == false && item.website.includes(".com") == false) // фильтруем элементы которые не равны com net org in
+other = users.filter(item => item.includes(".net") == false && item.includes(".org") == false && item.includes(".info") == false && item.includes(".com") == false) // фильтруем элементы которые не равны com net org in
+
 console.log(other);
 console.log(website);
 
