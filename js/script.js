@@ -238,20 +238,18 @@ let website = {
   com: []}
 let other = []
 
-users = users.forEach(item => {
-    item.splice(users.lastIndexOf('website'), 1)
-    console.log(users);
-})
 website.net = users.filter(item => item.website.includes(".net") == true)
 website.org = users.filter(item => item.website.includes(".org") == true)
 website.info = users.filter(item => item.website.includes(".info") == true)
 website.com = users.filter(item => item.website.includes(".com") == true)
-website = website.forEach(item => { 
 
-    });
 other = users.filter(item => item.website.includes(".net") == false && item.website.includes(".org") == false && item.website.includes(".info") == false && item.website.includes(".com") == false) // фильтруем элементы которые не равны com net org in
-console.log(other);
-console.log(website);
+other = other.filter(element => {
+    console.log(element.website);
+})
+// console.log(other);
+// console.log(website);
+
 
 
 
